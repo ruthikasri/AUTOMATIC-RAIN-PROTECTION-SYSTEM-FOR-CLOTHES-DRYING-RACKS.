@@ -1,0 +1,50 @@
+#include <DHT.h>
+
+// Pin Definitions
+#define RAIN_SENSOR_PIN  13  // Rain sensor digital output
+#define DHTPIN           4   // DHT sensor data pin
+#define DHTTYPE          DHT11 // Change to DHT22 if using DHT22
+#define IN1              5   // Motor driver IN1
+#define IN2              18  // Motor driver IN2
+#define ENA              19  // Motor Enable (PWM)
+
+// Threshold settings
+#define TEMP_THRESHOLD   30  // Minimum temperature to keep drying outside
+#define MOTOR_SPEED      150 // Motor speed (0-255)
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+    Serial.begin(115200);
+    
+    // Initialize sensors
+    pinMode(RAIN_SENSOR_PIN, INPUT);
+    dht.begin();
+    
+    // Initialize motor control pins
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
+    pinMode(ENA, OUTPUT);
+    
+    // Stop motor initially
+    stopMotor();
+}
+#####
+    .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.#####
+// Function to stop motor
+void stopMotor() {
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    analogWrite(ENA, 0);
+}
