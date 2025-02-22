@@ -1,6 +1,8 @@
 
 ## AUTOMATIC RAIN PROTECTION SYSTEM FOR CLOTHES DRYING RACKS
 
+
+
 ## Introduction
 Drying clothes outdoors is a common practice, but unpredictable rainfall can lead to extended drying times, unpleasant odors, and hygiene concerns. Manually moving clothes indoors during rain is inconvenient, especially in urban areas with limited space. This project aims to provide an automated solution to protect clothes from rain while ensuring efficient drying.
 
